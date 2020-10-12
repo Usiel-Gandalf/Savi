@@ -1,13 +1,15 @@
 package com.example.savi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AbsListView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity(){
-    private var button: Button? = null
+class MainActivity : AppCompatActivity() {
+    private var btnLogin: Button? = null
     private var editUser: EditText? = null
     private var editPassword: EditText? = null
 
@@ -15,21 +17,18 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button = findViewById(R.id.btnInicial) as Button
+        btnLogin = findViewById(R.id.btnInicial) as Button
         editUser = findViewById(R.id.editUser) as EditText
         editPassword = findViewById(R.id.editPassword) as EditText
+        login()
 
-        button!!.setOnClickListener{
-            val user = editUser!!.text.toString()
-            val password = editPassword!!
-            val duration = Toast.LENGTH_SHORT
-            if (user == "Usiel")
-            {
-                val toast = Toast.makeText(this, "Inicio de sesion correcto", duration).show()
-            }else{
-                val toast = Toast.makeText(this, "Usuario incorrecto", duration).show()
-            }
+    }
 
+    fun login() {
+        btnLogin!!.setOnClickListener() {
+            //val toast = Toast.makeText(this, "Uso de funciones con onclick", Toast.LENGTH_SHORT).show()
+            val log: Intent = Intent(applicationContext, SelectLanguaje::class.java)
+            startActivity(log)
         }
     }
 
