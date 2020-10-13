@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "251301682027",
+    "firebase_url": "https://savi-a14ec.firebaseio.com",
+    "project_id": "savi-a14ec",
+    "storage_bucket": "savi-a14ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251301682027:android:5e6548fd63d5d82f68ca2e",
+        "android_client_info": {
+          "package_name": "com.example.savi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251301682027-m2jtsq1m4dj4a795vkdonr77gjdst3og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDKFaN7GyPyZyuMvYy-VvtGO9e4AENL4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251301682027-m2jtsq1m4dj4a795vkdonr77gjdst3og.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Languaje"></activity>
         <activity android:name=".SelectLanguaje" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AuthActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
