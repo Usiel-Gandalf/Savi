@@ -3,6 +3,7 @@ package com.example.savi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_select_languaje.*
 import kotlin.String as String
@@ -25,19 +26,26 @@ class SelectLanguaje : AppCompatActivity() {
 
         val bundle = intent.extras
         val email: String? = bundle?.getString("email")
-        val provider: String? = bundle?.getString("provider")
+      //  val provider: String? = bundle?.getString("provider")
         //setup
-        setup(email ?: "", provider ?: "")
+        setup(email ?: "")
 
+        btnMixteco!!.setOnClickListener(){
+            Mixteco()
+        }
     }
 
-    private fun setup(email: String, provider: String) {
+    private fun setup(email: String) {
         txtCorreo.text = email
-        txtProvider.text = provider
+       // txtProvider.text = provider
         btnLogout!!.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
 
         }
+    }
+
+    private fun Mixteco(){
+        Toast.makeText(this, "Usted a seleccionado el lenguaje mixteco", Toast.LENGTH_LONG).show()
     }
 }
